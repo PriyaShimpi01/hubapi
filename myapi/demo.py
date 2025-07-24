@@ -69,7 +69,6 @@ def get_company_info():
         'revenue_latest': revenue
     })
 
-
 @app.route('/competitor-analysis', methods=['GET'])
 def competitor_analysis():
     company = request.args.get('company')
