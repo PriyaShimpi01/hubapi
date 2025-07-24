@@ -63,6 +63,11 @@ def get_company_info():
         'revenue_latest': revenue
     })
 
+@app.route('/')
+def home():
+    return "Welcome to the Company Info API! Use /company-info?company=YourCompanyName"
+
+
 if __name__ == '__main__':
     import os
     port = int(os.environ.get("PORT", 10000))
