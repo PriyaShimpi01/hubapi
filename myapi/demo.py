@@ -12,6 +12,9 @@ BASE_URL = 'https://finnhub.io/api/v1'
 def home():
     return "Welcome to the Company Info API! Use /company-info?company=YourCompanyName"
 
+@app.route('/test')
+def test():
+    return "✅ Flask is working!"
 
 @app.route('/company-info', methods=['GET'])
 def get_company_info():
