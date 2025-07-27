@@ -78,8 +78,8 @@ def competitor_analysis():
     location = request.args.get('location')
     industry = request.args.get('industry')
     try:
-        revenue = float(request.args.get('revenue'))
-        market_cap = float(request.args.get('market_cap'))
+        revenue = float(request.args.get('revenue',0))
+        market_cap = float(request.args.get('market_cap',0))
     except:
         return jsonify({'error': 'Invalid revenue or market_cap'}), 400
 
